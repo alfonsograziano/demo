@@ -6,7 +6,7 @@ export const RemotionRoot = () => {
 		<Composition
 			id="Interview"
 			component={Interview}
-			durationInFrames={20 * 30}
+			durationInFrames={5 * 30}
 			fps={30}
 			width={1920}
 			height={1080}
@@ -15,7 +15,8 @@ export const RemotionRoot = () => {
 					name: 'Sara Kalathil',
 					role: 'Software Engineer',
 				},
-				interviewUrl: 'https://website.com/interview.mp4',
+				interviewUrl:
+					'https://create-videos-demo.s3.eu-west-1.amazonaws.com/interview.mp4',
 			}}
 		/>
 	);

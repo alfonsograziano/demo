@@ -1,4 +1,4 @@
-import {AbsoluteFill, Img, staticFile} from 'remotion';
+import {Img, staticFile} from 'remotion';
 
 export const Logo = () => {
 	return (
