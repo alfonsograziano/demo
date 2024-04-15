@@ -1,5 +1,16 @@
+import {useCurrentFrame, spring, useVideoConfig} from 'remotion';
 export const PresenterInfo = ({presenter}) => {
 	const hPadding = 30;
+	const frame = useCurrentFrame();
+	const fps = useVideoConfig().fps;
+	const opacity = spring({
+		frame,
+		from: 0,
+		to: 1,
+		fps,
+		durationInFrames: 60,
+	});
+
 	return (
 		<div
 			style={{
@@ -8,6 +19,7 @@ export const PresenterInfo = ({presenter}) => {
 				left: 40,
 				fontFamily: 'Arial',
 				fontSize: 30,
+				opacity,
 			}}
 		>
 			<h1
